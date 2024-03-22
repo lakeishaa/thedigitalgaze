@@ -11,16 +11,19 @@ function setup() {
     for (let x = 0; x < 2; x++) {
       let xoffset = x * w;
       let yoffset = y * h;
-      let newCapture = createCapture({
-        audio: false,
-        video: {
-          width: w,
-          height: h
+      let newCapture = createCapture(
+        {
+          audio: false,
+          video: {
+            width: w,
+            height: h,
+          },
+        },
+        function () {
+          console.log("capture ready.");
         }
-      }, function() {
-        console.log('capture ready.');
-      });
-      newCapture.elt.setAttribute('playsinline', '');
+      );
+      newCapture.elt.setAttribute("playsinline", "");
       newCapture.size(w, h);
       newCapture.hide();
       captures.push(newCapture);
@@ -47,7 +50,7 @@ function draw() {
       var positions = tracker.getCurrentPosition(captures[captureIndex].elt);
 
       if (positions.length > 0) {
-        var leftEyeX = positions[32][0];
+        var leftEyeX = positions[31][0];
         var leftEyeY = positions[32][1];
 
         var zoomWidth = w / 7;
@@ -55,9 +58,19 @@ function draw() {
         var zoomX = leftEyeX - zoomWidth / 2;
         var zoomY = leftEyeY - zoomHeight / 2;
 
-        image(captures[captureIndex], x * w, y * h, w, h, zoomX, zoomY, zoomWidth, zoomHeight);
+        image(
+          captures[captureIndex],
+          x * w,
+          y * h,
+          w,
+          h,
+          zoomX,
+          zoomY,
+          zoomWidth,
+          zoomHeight
+        );
 
-        captures[captureIndex].elt.style.filter = 'invert(1)';
+        captures[captureIndex].elt.style.filter = "invert(1)";
       }
     }
   }
