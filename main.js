@@ -133,13 +133,13 @@ window.addEventListener("load", retrieveTimerState);
 // add more stuff
 
 // Get IP Address
-fetch("https://api.ipify.org?format=json")
-  .then((response) => response.json())
-  .then((data) => {
-    var ipAddress = data.ip;
-    console.log("IP Address:", ipAddress);
-  })
-  .catch((error) => console.error("Error getting IP address:", error));
+// fetch("https://api.ipify.org?format=json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     var ipAddress = data.ip;
+//     console.log("IP Address:", ipAddress);
+//   })
+//   .catch((error) => console.error("Error getting IP address:", error));
 
 // Function to set a cookie
 function setCookie(name, value, days) {
@@ -203,30 +203,30 @@ if (!getCookie("website_opened")) {
 var userAgent = navigator.userAgent;
 console.log("User Agent:", userAgent);
 
-// Check if geolocation is supported by the browser
-if ("geolocation" in navigator) {
-  // Get the user's current position
-  navigator.geolocation.getCurrentPosition(
-    function (position) {
-      // Access latitude and longitude from the position object
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
+// // Check if geolocation is supported by the browser
+// if ("geolocation" in navigator) {
+//   // Get the user's current position
+//   navigator.geolocation.getCurrentPosition(
+//     function (position) {
+//       // Access latitude and longitude from the position object
+//       var latitude = position.coords.latitude;
+//       var longitude = position.coords.longitude;
 
-      console.log("Latitude:", latitude);
-      console.log("Longitude:", longitude);
-    },
-    function (error) {
-      // Handle errors if any occur
-      console.error("Error getting geolocation:", error.message);
-    }
-  );
-} else {
-  console.log("Geolocation is not supported by this browser.");
-}
+//       console.log("Latitude:", latitude);
+//       console.log("Longitude:", longitude);
+//     },
+//     function (error) {
+//       // Handle errors if any occur
+//       console.error("Error getting geolocation:", error.message);
+//     }
+//   );
+// } else {
+//   console.log("Geolocation is not supported by this browser.");
+// }
 
-// Get timezone offset
-var timezoneOffset = new Date().getTimezoneOffset();
-console.log("Timezone Offset:", timezoneOffset);
+// // Get timezone offset
+// var timezoneOffset = new Date().getTimezoneOffset();
+// console.log("Timezone Offset:", timezoneOffset);
 
 // Simulated login status
 var isLoggedIn = true; // Assume the user is logged in
@@ -250,24 +250,24 @@ var deviceInformation = {
 };
 console.log("Device Information:", deviceInformation);
 
-// Function to track and log timezone
-function trackAndLogTimezone() {
-  var timezoneOffset = new Date().getTimezoneOffset();
-  var hoursOffset = Math.abs(Math.floor(timezoneOffset / 60));
-  var minutesOffset = Math.abs(timezoneOffset % 60);
-  var sign = timezoneOffset > 0 ? "-" : "+"; // Determine the sign based on the offset
+// // Function to track and log timezone
+// function trackAndLogTimezone() {
+//   var timezoneOffset = new Date().getTimezoneOffset();
+//   var hoursOffset = Math.abs(Math.floor(timezoneOffset / 60));
+//   var minutesOffset = Math.abs(timezoneOffset % 60);
+//   var sign = timezoneOffset > 0 ? "-" : "+"; // Determine the sign based on the offset
 
-  // Format the timezone offset
-  var formattedTimezoneOffset =
-    sign +
-    (hoursOffset < 10 ? "0" : "") +
-    hoursOffset +
-    ":" +
-    (minutesOffset < 10 ? "0" : "") +
-    minutesOffset;
+//   // Format the timezone offset
+//   var formattedTimezoneOffset =
+//     sign +
+//     (hoursOffset < 10 ? "0" : "") +
+//     hoursOffset +
+//     ":" +
+//     (minutesOffset < 10 ? "0" : "") +
+//     minutesOffset;
 
-  console.log("Timezone Offset:", formattedTimezoneOffset);
-}
+//   console.log("Timezone Offset:", formattedTimezoneOffset);
+// }
 
 // Call the function to track and log timezone
 trackAndLogTimezone();
