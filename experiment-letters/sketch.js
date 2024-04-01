@@ -7,7 +7,7 @@ let letters = ["&", "g", "a", "z", "e", "*", "#"];
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  gridSizeSlider = createSlider(20, 55, 7);
+  // gridSizeSlider = createSlider(20, 55, 3);
   gridSizeSlider.position(10, 10);
 
   invertSlider = createSlider(0, 1, 0);
