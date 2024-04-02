@@ -13,15 +13,15 @@ import {
 // 4. copy the "const firebaseConfig" stuff here
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAMQ_CG_5z5hnipSNsGPgOQ_0qdwuvvkFE",
-  authDomain: "experiment-1-a5569.firebaseapp.com",
-  projectId: "experiment-1-a5569",
-  storageBucket: "experiment-1-a5569.appspot.com",
-  messagingSenderId: "786848567347",
-  appId: "1:786848567347:web:ede8d79959c40fce2d1346",
-  measurementId: "G-FENP5DHES2",
-  storageBucket: "gs://experiment-1-a5569.appspot.com",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: "the-digital-gaze.firebaseapp.com",
+  projectId: "the-digital-gaze",
+  storageBucket: "the-digital-gaze.appspot.com",
+  messagingSenderId: "523916107442",
+  appId: "1:523916107442:web:2b53cf035593c9d06273ab",
+  measurementId: "G-VNEYBB35ME",
 };
+
 // only replace the const stuff ^^^^
 
 // COPY EVERYTHING BELOW BUT READ THE NOTES VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
